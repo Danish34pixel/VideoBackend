@@ -11,7 +11,11 @@ const videoRoutes = require('./routes/videoRoutes');
 const app = express();
 
 // Middleware
-app.use(cors());
+const frontendUrl = process.env.FRONTEND_URL || '*';
+app.use(cors({
+  origin: frontendUrl,
+  credentials: true
+}));
 app.use(express.json({ limit: '100mb' }));
 app.use(express.urlencoded({ limit: '100mb', extended: true }));
 

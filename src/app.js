@@ -12,7 +12,7 @@ const app = express();
 
 // Middleware
 const allowedOrigins = [
-  'https://video-frontend-smoky.vercel.app',
+  'https://video-frontend-gp91.vercel.app',
   'http://localhost:5173',
   'http://localhost:3000',
   process.env.FRONTEND_URL
